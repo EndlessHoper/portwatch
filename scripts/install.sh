@@ -10,7 +10,8 @@ echo "Installing $APP_NAME..."
 # Detect architecture
 ARCH=$(uname -m)
 if [ "$ARCH" != "arm64" ]; then
-    echo "Error: Only Apple Silicon (arm64) is supported"
+    echo "Error: PortWatch currently supports Apple Silicon (arm64) only."
+    echo "If you are on Intel, please build from source."
     exit 1
 fi
 

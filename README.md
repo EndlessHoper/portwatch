@@ -24,7 +24,7 @@ Install via curl:
 curl -fsSL https://raw.githubusercontent.com/EndlessHoper/portwatch/main/scripts/install.sh | bash
 ```
 
-Or download the latest release from GitHub Releases, or build from source:
+Apple Silicon (arm64) only. Or download the latest release from GitHub Releases, or build from source:
 
 ```bash
 git clone https://github.com/EndlessHoper/portwatch.git
