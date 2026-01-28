@@ -18,7 +18,13 @@ A lightweight macOS menu bar utility for developers to monitor and manage TCP li
 
 ## Install
 
-Download the latest release from GitHub Releases, or build from source:
+Install via curl:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/EndlessHoper/portwatch/main/scripts/install.sh | bash
+```
+
+Or download the latest release from GitHub Releases, or build from source:
 
 ```bash
 git clone https://github.com/EndlessHoper/portwatch.git
@@ -72,6 +78,14 @@ Unrecognized processes still appear - they just won't have a framework label.
 
 ```bash
 rm -rf ~/Applications/PortWatch.app
+```
+
+## Troubleshooting
+
+If macOS says the app is damaged after downloading the zip, remove the quarantine flag and try again:
+
+```bash
+xattr -cr "/path/to/PortWatch.app"
 ```
 
 ## License

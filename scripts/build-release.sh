@@ -40,6 +40,9 @@ cat > "$DIST_DIR/$APP_NAME.app/Contents/Info.plist" << EOF
 </plist>
 EOF
 
+# Ad-hoc sign to reduce Gatekeeper friction
+codesign --force --deep --sign - "$DIST_DIR/$APP_NAME.app"
+
 # Create zip for distribution
 cd "$DIST_DIR"
 zip -r "$APP_NAME-$VERSION-arm64.zip" "$APP_NAME.app"
